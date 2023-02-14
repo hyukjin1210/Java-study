@@ -55,28 +55,28 @@ public class Report4 {
 
 //5-5. 다음은 1과 9 사이의 중복되지 않은 숫자로 이루어진 3자리 숫자를 만들어내는 프로그램이다.
 //코드를 완성하세요. 다만 Math.random()을 사용했기 때문에 실행 결과 예시와 다를 수 있습니다.
-//        int[] ballArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-//        int[] ball3 = new int[3];
-//
-//        // 배열 ballArr의 임의의 요소를 골라서 위치를 바꾼다
-//        for (int i = 0; i <= ballArr.length; i++) { //랜덤숫자 3개를 받아와서 중복제거를 한 뒤 할당 해주어야 함.
-//            int j = (int) (Math.random() * ballArr.length);
-//            int tmp = 0;
-//
-//            tmp = ballArr[i];
-//            System.out.println("tmp=" + tmp);
-//            ballArr[i] = ballArr[j];
-//            ballArr[j] = tmp;
-//            System.out.println(ballArr[i]);
-//        }
-//
-//        // 배열 ballArr의 앞에서 3개의 수를 배열 ball3로 복사한다
-////        ball3 = Arrays.copyOfRange(ballArr,0,2);
-////        System.arraycopy(ballArr,0, ball3,0,3);
-//
-//        for (int i = 0; i < ball3.length; i++) {
-//            System.out.print(ball3[i]);
-//        } 이 문제는 왜 여기서 실행하면 컴파일에러가 나는 것인가?? 진짜 전혀 모르겠다.
+        int[] ballArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int[] ball3 = new int[3];
+
+        // 배열 ballArr의 임의의 요소를 골라서 위치를 바꾼다
+        for (int i = 0; i < ballArr.length; i++) { //랜덤숫자 3개를 받아와서 중복제거를 한 뒤 할당 해주어야 함.
+            int j = (int) (Math.random() * ballArr.length);
+            int tmp = 0;
+
+            tmp = ballArr[0];
+            System.out.println("tmp=" + tmp);
+            ballArr[0] = ballArr[j];
+            ballArr[j] = tmp;
+            System.out.println(ballArr[i]);
+        }
+
+        // 배열 ballArr의 앞에서 3개의 수를 배열 ball3로 복사한다
+//        ball3 = Arrays.copyOfRange(ballArr,0,2);
+//        System.arraycopy(ballArr,0, ball3,0,3);
+
+        for (int i = 0; i < ball3.length; i++) {
+            System.out.print(ball3[i]);
+        } //이 문제는 왜 여기서 실행하면 컴파일에러가 나는 것인가?? 진짜 전혀 모르겠다.
 
 //5-6. 단어의 글자위치를 섞어서 보여주고 원래의 단어를 맞추는 예제이다.
 //실행결과와 같이 동작하도록 빈 칸을 채우세요.
@@ -121,11 +121,43 @@ class Exercise5_5{
 
         // 배열 ballArr의 앞에서 3개의 수를 배열 ball3로 복사한다
 
+
         ball3 = Arrays.copyOfRange(ballArr,0,3);    //문법은 (복사할배열, 시작인덱스,끝낼인덱스)인데 왜 0 ~ 2 가 아닌 0 ~ 3으로 해야하는가
 //        System.arraycopy(ballArr,0, ball3,0,3);
+//        System.out.println(ball3.length);
 
         for (int i = 0; i < ball3.length; i++) {
             System.out.print(ball3[i]);
         }
     }//end of main
 }//end of class
+
+////5-5. 다음은 1과 9 사이의 중복되지 않은 숫자로 이루어진 3자리 숫자를 만들어내는 프로그램이다.
+//////////코드를 완성하세요. 다만 Math.random()을 사용했기 때문에 실행 결과 예시와 다를 수 있습니다.
+////////class Exercise5_5{
+////// public static void main(String[] args) {
+////// int[] ballArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+////// int[] ball3 = new int[3];
+//////
+////// // 배열 ballArr의 임의의 요소를 골라서 위치를 바꾼다
+////// for (int i = 0; i < ballArr.length; i++) {
+////// int j = (int) (Math.random() * ballArr.length);
+////// int tmp = 0;
+//////
+////// tmp = ballArr[j];
+////// ballArr[j] = ballArr[i];
+////// ballArr[i] = tmp;
+//////
+////// }
+//////
+////// // 배열 ballArr의 앞에서 3개의 수를 배열 ball3로 복사한다
+//////
+////// for(int i = 0; i < ball3.length; i++){
+////// ball3[i] = ballArr[i];
+////// }
+//////
+////// for (int i = 0; i < ball3.length; i++) {
+////// System.out.print(ball3[i]);
+////// }
+////// }//end of main
+//////}//end of class
