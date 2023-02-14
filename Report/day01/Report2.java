@@ -1,6 +1,4 @@
-package Variable;
-
-import java.util.Scanner;
+package Report.day01;
 
 public class Report2 {
     public static void main(String[] args) {
@@ -64,10 +62,13 @@ public class Report2 {
         //변환 공식이 'C = 5/9*(F-32)'라고 할 때, 빈 칸에 알맞은 코드를 넣으시오.
         // 단, 변환값은 소수점 셋째자리에서 반올림하며, Math.round() 함수를 사용하지 않고 처리할 것!
         int fahrenheit = 100;
-        float celcius = (float) 5 / 9 * (fahrenheit - 32);
+        float celcius = ((int) ((5 / 9f * (fahrenheit - 32)) * 100 + 0.5) / 100f);
+//        float celcius = (float) 5 / 9 * (fahrenheit - 32);
         System.out.println("Fahrenheit:" + fahrenheit);
-        System.out.printf("Celcius %.2f" , celcius);
+        System.out.println("Celcius: " + celcius);
+//        System.out.printf("Celcius %.2f" , celcius);
         //예상 결과 : Fahrenheit:100, Celcius:37.78
+
 
     }//main
 }//class
