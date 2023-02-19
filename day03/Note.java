@@ -19,6 +19,7 @@ public class Note {
         for (int i = 0; i < in.length; i++) {
             st1.push(in[i]);
         }
+        System.out.println("현재 스택의 길이: " + st1.size());
         while (!st1.empty()) {
             System.out.println("스택 " + st1.pop());
 
