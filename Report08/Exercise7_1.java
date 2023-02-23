@@ -14,6 +14,18 @@ class SutdaDeck {
 
     SutdaDeck() {
         // (구현) 배열 SutdaCard를 적절히 초기화 하시오.
+
+        for (int i = 0; i < CARD_NUM / 2; i++) {    //0 ~ 9까지
+            cards[i] = new SutdaCard(i + 1, false);
+            if (i == 0 || i == 2 || i == 7) {
+                cards[i] = new SutdaCard(i + 1, true);
+            }
+
+        }
+
+        for (int i = 10; i < CARD_NUM; i++) {   //10 ~ 20까지
+            cards[i] = new SutdaCard(i % 10 + 1, false);
+        }
     }
 }
 
