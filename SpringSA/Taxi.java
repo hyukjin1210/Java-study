@@ -96,6 +96,7 @@ public class Taxi extends transPort{
             System.out.println("탑승이 가능합니다.");
             nowPassenger += passenger;
             maxPassenger -= passenger;
+
             System.out.println("현재 승객 수는 " + nowPassenger + "명 입니다.");
             System.out.println("잔여 좌석 수는 " + maxPassenger + "석 입니다.");
         } else if (passenger > maxPassenger) {
@@ -113,6 +114,5 @@ public class Taxi extends transPort{
 /*
 궁금한 것.
 useTransPort 메서드에서 maxPassenger 와 nowPassenger 를 이용하여 값을 비교 , 연산한다.
-메서드 내부에서 사용된 변수는 지역변수 이다.
-
+그렇다면 초기화를 어떻게 해주어야 맞는 방법인가?
 */
