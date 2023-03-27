@@ -9,6 +9,7 @@ public class Map_prac2 {
         map.put("이자바",100);
         map.put("장자바",80);
         map.put("박자바",70);
+        map.put("박자바",70);
 
         Set set = map.entrySet();   //entrySet을 이용해 맵에 저장된 데이터를 불러올 수 있다.
         Iterator it = set.iterator();
